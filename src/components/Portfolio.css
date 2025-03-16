@@ -2,8 +2,9 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%);
   background-size: 400% 400%;
+  background: url('https://www.transparenttextures.com/patterns/asfalt-light.png');
   animation: gradientAnimation 15s ease infinite;
   color: #333;
   margin: 0;
@@ -206,8 +207,8 @@ body {
 }
 
 .certifications-section {
-  background: linear-gradient(to right, #6dd5fa, #2980b9);
-  color: white;
+  background: linear-gradient(to right, #e0eafc, #cfdef3); /* Subtle professional gradient */
+  color: #333; /* Dark text color for readability */
   animation: fadeIn 2s ease-in-out;
 }
 
