@@ -6,11 +6,11 @@ const Portfolio = () => {
   return (
     <div className="portfolio">
       <nav className="navbar">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#work-experience">Work Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact Me</a>
+        <a href="#home" className="nav-link">Home</a>
+        <a href="#about" className="nav-link">About</a>
+        <a href="#work-experience" className="nav-link">Work Experience</a>
+        <a href="#projects" className="nav-link">Projects</a>
+        <a href="#contact" className="nav-link">Contact Me</a>
       </nav>
 
       <section id="home" className="section home-section">
@@ -28,16 +28,25 @@ const Portfolio = () => {
         
         <h2 className="subheading">Skills</h2>
         <div className="skills-container">
-          <ul className="list fadeIn">
-            <li>Java, JavaScript</li>
-            <li>Oracle SQL, MySQL</li>
-            <li>REST API, Angular</li>
-            <li>React, Spring Boot</li>
-            <li>JBOSS, Maven</li>
-            <li>Visual Studio Code, IntelliJ</li>
-            <li>Eclipse IDE, Git</li>
-            <li>SVN, Postman</li>
-            <li>Agile, Jira</li>
+          <ul className="skills-grid fadeIn">
+            <li>Java</li>
+            <li>JavaScript</li>
+            <li>Oracle SQL</li>
+            <li>MySQL</li>
+            <li>REST API</li>
+            <li>Angular</li>
+            <li>React</li>
+            <li>Spring Boot</li>
+            <li>JBOSS</li>
+            <li>Maven</li>
+            <li>Visual Studio Code</li>
+            <li>IntelliJ</li>
+            <li>Eclipse IDE</li>
+            <li>Git</li>
+            <li>SVN</li>
+            <li>Postman</li>
+            <li>Agile</li>
+            <li>Jira</li>
             <li>GitHub Copilot</li>
           </ul>
         </div>
@@ -94,23 +103,23 @@ const Portfolio = () => {
       <section id="projects" className="section projects-section">
         <h2 className="subheading">Projects</h2>
         <div className="projects-container">
-          <div className="project-card">
+          <div className="project-card fadeIn">
             <h3>Trade Finance Project for CACIB, Singapore</h3>
             <p>(Jun 2023 - Present): Developed front-end and back-end components for the Trade Finance Application using Angular and Spring Boot.</p>
           </div>
-          <div className="project-card">
+          <div className="project-card fadeIn">
             <h3>Digital Transformation Project for CACIB, Singapore</h3>
             <p>(Jun 2023 - Present): Created user interfaces and microservices to enhance OCR accuracy.</p>
           </div>
-          <div className="project-card">
+          <div className="project-card fadeIn">
             <h3>Global Trade Portal</h3>
             <p>(May 2022 - Jun 2023): Developed Bank Guarantee modules using Angular and Java.</p>
           </div>
-          <div className="project-card">
+          <div className="project-card fadeIn">
             <h3>Migration and User Management Project for Sky, London</h3>
             <p>(Feb 2021 - May 2022): Developed UI and integrated BPM APIs for a User Management Module in React JS.</p>
           </div>
-          <div className="project-card">
+          <div className="project-card fadeIn">
             <h3>Bank Guarantee Project for ICICI Bank, India</h3>
             <p>(Nov 2019 - Jan 2021): Designed and developed user interface using inhouse technology.</p>
           </div>
