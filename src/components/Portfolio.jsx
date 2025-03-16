@@ -28,7 +28,7 @@ const Portfolio = () => {
         
         <h2 className="subheading">Skills</h2>
         <div className="skills-container">
-          <ul className="skills-grid fadeIn">
+          <ul className="skills-list fadeIn">
             <li>Java</li>
             <li>JavaScript</li>
             <li>Oracle SQL</li>
