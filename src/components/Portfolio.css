@@ -1,102 +1,123 @@
 body {
-  scroll-behavior: smooth;
-  background: linear-gradient(to right, #6a11cb, #2575fc);
-  color: #fff;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
 }
 
 .portfolio {
-  padding: 20px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: rgba(255, 255, 255, 0.9);
-  color: #333;
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  animation: fadeIn 1s ease-in-out;
+  padding: 20px;
 }
 
 .navbar {
   display: flex;
   justify-content: space-around;
-  background-color: #007acc;
-  padding: 10px;
+  background-color: #333;
+  padding: 10px 0;
   border-radius: 10px;
-  margin-bottom: 20px;
 }
 
 .navbar a {
-  color: white;
+  color: #fff;
   text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
+  padding: 10px 20px;
+  transition: background-color 0.3s;
 }
 
 .navbar a:hover {
-  color: #ffcc00;
+  background-color: #555;
+}
+
+.section {
+  margin: 40px 0;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
+  text-align: center;
 }
 
 .profilePic {
   border-radius: 50%;
   width: 150px;
   height: 150px;
-  margin-right: 20px;
-  animation: bounceIn 1s ease-in-out;
 }
 
 .heading {
   font-size: 2.5em;
-  color: #007acc;
-  animation: slideIn 1s ease-in-out;
+  margin: 20px 0;
+  color: #007bff;
 }
 
 .subheading {
-  font-size: 1.5em;
-  margin-top: 20px;
-  color: #007acc;
-  animation: slideIn 1s ease-in-out;
-}
-
-.list {
-  list-style-type: none;
-  padding: 0;
-  animation: fadeIn 1s ease-in-out;
-}
-
-.experience {
-  margin-top: 10px;
-  animation: fadeIn 1s ease-in-out;
-}
-
-.jobTitle {
-  font-size: 1.2em;
-  margin-bottom: 5px;
-  color: #007acc;
-  animation: slideIn 1s ease-in-out;
-}
-
-.jobDuration {
-  margin: 0;
-  font-style: italic;
-  animation: fadeIn 1s ease-in-out;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  color: #555;
 }
 
 .fadeIn {
   animation: fadeIn 1s ease-in-out;
 }
 
-.section {
-  margin-bottom: 40px;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.list li {
+  background-color: #fff;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.experience {
+  background-color: #fff;
   padding: 20px;
-  border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.jobTitle {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.jobDuration {
+  font-size: 1em;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.contact-section p {
+  margin: 10px 0;
+}
+
+.contact-section a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-section a:hover {
+  text-decoration: underline;
 }
 
 .home-section {
@@ -108,24 +129,15 @@ body {
 }
 
 .work-experience-section {
-  background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+  background: url('https://images.unsplash.com/photo-1515165562835-cf6596a8a6b4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
 }
 
 .projects-section {
-  background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+  background: url('https://images.unsplash.com/photo-1517430816045-df4b7de01f17?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
 }
 
 .contact-section {
-  background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  background: url('https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
 }
 
 @keyframes slideIn {
