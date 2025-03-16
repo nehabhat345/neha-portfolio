@@ -2,9 +2,8 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%);
+  background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
   background-size: 400% 400%;
-  background: url('https://www.transparenttextures.com/patterns/asfalt-light.png');
   animation: gradientAnimation 15s ease infinite;
   color: #333;
   margin: 0;
