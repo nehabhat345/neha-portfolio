@@ -1,37 +1,73 @@
 .portfolio {
-    padding: 20px;
-    font-family: Arial, sans-serif;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.portfolio h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #007acc;
+  text-align: center;
+  animation: slideIn 1s ease-in-out;
+}
+
+.portfolio h2 {
+  font-size: 1.5em;
+  margin-top: 20px;
+  color: #007acc;
+  animation: slideIn 1s ease-in-out;
+}
+
+.portfolio ul {
+  list-style-type: none;
+  padding: 0;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.portfolio li {
+  margin-bottom: 5px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.experience {
+  margin-top: 10px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.experience h3 {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+  color: #007acc;
+  animation: slideIn 1s ease-in-out;
+}
+
+.experience p {
+  margin: 0;
+  font-style: italic;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
-  .portfolio h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
+  to {
+    opacity: 1;
   }
-  
-  .portfolio h2 {
-    font-size: 1.5em;
-    margin-top: 20px;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
   }
-  
-  .portfolio ul {
-    list-style-type: none;
-    padding: 0;
+  to {
+    transform: translateX(0);
   }
-  
-  .portfolio li {
-    margin-bottom: 5px;
-  }
-  
-  .experience {
-    margin-top: 10px;
-  }
-  
-  .experience h3 {
-    font-size: 1.2em;
-    margin-bottom: 5px;
-  }
-  
-  .experience p {
-    margin: 0;
-    font-style: italic;
-  }
+}
