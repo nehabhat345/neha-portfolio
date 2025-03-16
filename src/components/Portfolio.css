@@ -1,13 +1,39 @@
+body {
+  scroll-behavior: smooth;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: #fff;
+}
+
 .portfolio {
   padding: 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f4f4f9;
+  background-color: rgba(255, 255, 255, 0.9);
   color: #333;
   max-width: 800px;
   margin: 0 auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   animation: fadeIn 1s ease-in-out;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  background-color: #007acc;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #ffcc00;
 }
 
 .header {
@@ -18,9 +44,10 @@
 
 .profilePic {
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   margin-right: 20px;
+  animation: bounceIn 1s ease-in-out;
 }
 
 .heading {
@@ -64,6 +91,34 @@
   animation: fadeIn 1s ease-in-out;
 }
 
+.section {
+  margin-bottom: 40px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.home-section {
+  background: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+}
+
+.about-section {
+  background: url('https://images.unsplash.com/photo-1506747600324-612cbacb4c20?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+}
+
+.work-experience-section {
+  background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+}
+
+.projects-section {
+  background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+}
+
+.contact-section {
+  background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -79,5 +134,19 @@
   }
   to {
     transform: translateX(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
   }
 }
