@@ -2,16 +2,27 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #f4f4f9;
+  background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
   color: #333;
   margin: 0;
   padding: 0;
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .portfolio {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .navbar {
@@ -159,21 +170,6 @@ body {
   margin-bottom: 10px;
 }
 
-.certifications-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.certification-card {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  flex: 1 1 calc(33.333% - 20px); /* Three cards per row */
-  animation: fadeIn 1s ease-in-out;
-}
-
 .contact-section p {
   margin: 10px 0;
   background-color: rgba(255, 255, 255, 0.8);
@@ -193,7 +189,7 @@ body {
 
 .home-section {
   position: relative;
-  background: linear-gradient(to bottom right, #a8c0ff, #3f2b96); /* Light blue gradient */
+  background: linear-gradient(to bottom right, #6dd5fa, #2980b9); /* Light blue gradient */
   color: #ffffff; /* Ensure text color is white */
 }
 
@@ -207,6 +203,12 @@ body {
 
 .projects-section {
   background: url('https://images.unsplash.com/photo-1517430816045-df4b7de01f17?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+}
+
+.certifications-section {
+  background: linear-gradient(to right, #6dd5fa, #2980b9);
+  color: white;
+  animation: fadeIn 2s ease-in-out;
 }
 
 .contact-section {
@@ -239,6 +241,35 @@ body {
 }
 
 .project-card p {
+  margin-bottom: 0;
+}
+
+.certifications-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.certification-card {
+  flex: 1 1 calc(33.333% - 20px);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.certification-card:hover {
+  transform: translateY(-10px);
+}
+
+.certification-card h3 {
+  margin-top: 0;
+  color: #007bff;
+}
+
+.certification-card p {
   margin-bottom: 0;
 }
 

@@ -14,7 +14,8 @@ const Portfolio = () => {
         <a href="#contact" className="nav-link">Contact Me</a>
       </nav>
 
-      <section id="home" className="section home-section">
+      <section id="home" className="section home-section" 
+      style={{ color: 'white', background: 'linear-gradient(to right, #6dd5fa, #2980b9)', animation: 'fadeIn 2s ease-in-out' }}>
         <div className="header">
           <img src={profilePic} alt="Neha Bhat" className="profilePic" />
           <h1 className="heading">Neha Bhat</h1>
@@ -132,7 +133,8 @@ const Portfolio = () => {
         </div>
       </section>
 
-      <section id="certifications" className="section certifications-section">
+      <section id="certifications" className="section certifications-section" 
+      style={{ color: 'white', background: 'linear-gradient(to right, #6dd5fa, #2980b9)', animation: 'fadeIn 2s ease-in-out' }}>
         <h2 className="subheading">Licenses and Certifications</h2>
         <div className="certifications-container">
           <div className="certification-card fadeIn">
@@ -159,9 +161,7 @@ const Portfolio = () => {
       <section id="contact" className="section contact-section">
         <h2 className="subheading">Contact Me</h2>
         <p className="fadeIn">Feel free to reach out to me via email or phone.</p>
-        <p className="fadeIn">Email: nehabhat345@gmail.com</p>
-        <p className="fadeIn">Phone: +65 82877436</p>
-        <p className="fadeIn">LinkedIn: <a href="https://linkedin.com/in/neha-bhat-855441105" target="_blank" rel="noopener noreferrer">linkedin.com/in/neha-bhat-855441105</a></p>
+        <p className="fadeIn">Email: nehabhat345@gmail.com | Phone: +65 82877436 | LinkedIn: <a href="https://linkedin.com/in/neha-bhat-855441105" target="_blank" rel="noopener noreferrer">linkedin.com/in/neha-bhat-855441105</a></p>
       </section>
     </div>
   );
