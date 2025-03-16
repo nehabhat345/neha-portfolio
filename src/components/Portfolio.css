@@ -56,8 +56,8 @@ body {
 
 .heading {
   font-size: 2.5em;
-  margin: 20px 0;
-  color: #ffffff; /* Change text color to white */
+  margin: 10px 0;
+  color: #333; /* Professional dark color */
   animation: slideIn 1s ease-in-out;
 }
 
@@ -132,26 +132,46 @@ body {
   gap: 20px;
 }
 
-.experience {
+.experience-card {
   background-color: #fff;
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
   flex: 1 1 calc(50% - 20px); /* Two cards per row */
   animation: fadeIn 1s ease-in-out;
 }
 
 .jobTitle {
   font-size: 1.5em;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   color: #007bff;
+}
+
+.company {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #555;
 }
 
 .jobDuration {
   font-size: 1em;
   color: #777;
   margin-bottom: 10px;
+}
+
+.certifications-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.certification-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex: 1 1 calc(33.333% - 20px); /* Three cards per row */
+  animation: fadeIn 1s ease-in-out;
 }
 
 .contact-section p {
@@ -190,7 +210,7 @@ body {
 }
 
 .contact-section {
-  background: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover; /* Unique minimalist background image */
+  background: linear-gradient(to bottom right, #f0f0f0, #d9d9d9); /* Minimalist professional gradient */
 }
 
 .projects-container {
@@ -228,11 +248,11 @@ body {
     flex-direction: column;
   }
 
-  .skills-container, .experience-container, .projects-container {
+  .skills-container, .experience-container, .projects-container, .certifications-container {
     flex-direction: column;
   }
 
-  .experience, .project-card {
+  .experience-card, .project-card, .certification-card {
     flex: 1 1 100%;
   }
 

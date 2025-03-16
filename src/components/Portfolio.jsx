@@ -10,13 +10,15 @@ const Portfolio = () => {
         <a href="#about" className="nav-link">About</a>
         <a href="#work-experience" className="nav-link">Work Experience</a>
         <a href="#projects" className="nav-link">Projects</a>
+        <a href="#certifications" className="nav-link">Certifications</a>
         <a href="#contact" className="nav-link">Contact Me</a>
       </nav>
 
       <section id="home" className="section home-section">
         <div className="header">
           <img src={profilePic} alt="Neha Bhat" className="profilePic" />
-          <h1 className="heading">Neha Bhat - Full Stack Developer</h1>
+          <h1 className="heading">Neha Bhat</h1>
+          <h2 className="subheading">Full Stack Developer</h2>
         </div>
       </section>
 
@@ -55,8 +57,9 @@ const Portfolio = () => {
       <section id="work-experience" className="section work-experience-section">
         <h2 className="subheading">Work Experience</h2>
         <div className="experience-container">
-          <div className="experience fadeIn">
-            <h3 className="jobTitle">Senior Software Engineer at Credit Agricole Corporate & Investment Bank</h3>
+          <div className="experience-card fadeIn">
+            <h3 className="jobTitle">Senior Software Engineer</h3>
+            <p className="company">Credit Agricole Corporate & Investment Bank</p>
             <p className="jobDuration">May 2022 - Present, Singapore</p>
             <ul className="list">
               <li>Leading development of Trade Finance application, delivering frontend interfaces and back-end modules using Java & Angular.</li>
@@ -67,8 +70,9 @@ const Portfolio = () => {
               <li>Tech Stack: Java, Angular, Spring Boot, SQL, REST API, CI/CD.</li>
             </ul>
           </div>
-          <div className="experience fadeIn">
-            <h3 className="jobTitle">Senior Engineer at L&T Technology Services</h3>
+          <div className="experience-card fadeIn">
+            <h3 className="jobTitle">Senior Engineer</h3>
+            <p className="company">L&T Technology Services</p>
             <p className="jobDuration">Feb 2021 - May 2022, Bengaluru, India</p>
             <ul className="list">
               <li>Developed UI applications for Telecom Project using React JS.</li>
@@ -77,8 +81,9 @@ const Portfolio = () => {
               <li>Tech Stack: React.js, Redux, Spring Boot, Jest, REST API, CI/CD.</li>
             </ul>
           </div>
-          <div className="experience fadeIn">
-            <h3 className="jobTitle">Software Engineer at Newgen Software Technologies</h3>
+          <div className="experience-card fadeIn">
+            <h3 className="jobTitle">Software Engineer</h3>
+            <p className="company">Newgen Software Technologies</p>
             <p className="jobDuration">Apr 2019 - Jan 2021, Noida, India</p>
             <ul className="list">
               <li>Created robust Java algorithms and JavaScript validations for the Bank Guarantee module.</li>
@@ -87,8 +92,9 @@ const Portfolio = () => {
               <li>Tech Stack: Java, Angular, Oracle SQL, JavaScript.</li>
             </ul>
           </div>
-          <div className="experience fadeIn">
-            <h3 className="jobTitle">Software Developer at Silverskills Private Limited</h3>
+          <div className="experience-card fadeIn">
+            <h3 className="jobTitle">Software Developer</h3>
+            <p className="company">Silverskills Private Limited</p>
             <p className="jobDuration">May 2017 - Apr 2019, Gurgaon, India</p>
             <ul className="list">
               <li>Automated data entry processes using Java and Selenium, reducing manual errors by 25%.</li>
@@ -122,6 +128,30 @@ const Portfolio = () => {
           <div className="project-card fadeIn">
             <h3>Bank Guarantee Project for ICICI Bank, India</h3>
             <p>(Nov 2019 - Jan 2021): Designed and developed user interface using inhouse technology.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="certifications" className="section certifications-section">
+        <h2 className="subheading">Licenses and Certifications</h2>
+        <div className="certifications-container">
+          <div className="certification-card fadeIn">
+            <h3>Github Copilot for Java and Spring Boot Developers</h3>
+            <p>GitHub</p>
+            <p>Issued: Feb 2025</p>
+            <p>Credential ID: 3be2c887-f919-4f2e-b314-ecd995dcfe7b</p>
+          </div>
+          <div className="certification-card fadeIn">
+            <h3>Building Scalable Java Microservices with Spring Boot and Spring Cloud</h3>
+            <p>Google Cloud</p>
+            <p>Issued: Nov 2024</p>
+            <p>Credential ID: RP4UUU8HJIK2</p>
+          </div>
+          <div className="certification-card fadeIn">
+            <h3>Certified React Developer</h3>
+            <p>React Training</p>
+            <p>Issued: March 2022</p>
+            <p>Credential ID: 46ad8de62e0a</p>
           </div>
         </div>
       </section>
