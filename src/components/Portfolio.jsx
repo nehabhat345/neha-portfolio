@@ -1,9 +1,13 @@
 import React from 'react';
+import profilePic from '../assets/profile.jpeg';
 
 const Portfolio = () => {
   return (
     <div style={styles.portfolio}>
-      <h1 style={styles.heading}>Neha Bhat - Full Stack Developer</h1>
+      <div style={styles.header}>
+        <img src={profilePic} alt="Neha Bhat" style={styles.profilePic} />
+        <h1 style={styles.heading}>Neha Bhat - Full Stack Developer</h1>
+      </div>
       <p>Full Stack Software Engineer with 8 years of experience in Java, Angular, Spring Boot Microservices, React, and SQL. Proficient in delivering scalable solutions in Banking, Finance, and Telecommunication sectors. Adept at collaborating with cross-functional teams and driving agile development practices to meet business objectives.</p>
       <p>Email: nehabhat345@gmail.com | Phone: +65 82877436 | Location: Singapore</p>
       <p>LinkedIn: <a href="https://linkedin.com/in/neha-bhat-855441105" target="_blank" rel="noopener noreferrer">linkedin.com/in/neha-bhat-855441105</a></p>
@@ -101,11 +105,20 @@ const styles = {
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
     animation: 'fadeIn 1s ease-in-out',
   },
+  header: {
+    display: 'flex',
+    alignItems: 'center',
+    marginBottom: '20px',
+  },
+  profilePic: {
+    borderRadius: '50%',
+    width: '100px',
+    height: '100px',
+    marginRight: '20px',
+  },
   heading: {
     fontSize: '2.5em',
-    marginBottom: '10px',
     color: '#007acc',
-    textAlign: 'center',
     animation: 'slideIn 1s ease-in-out',
   },
   subheading: {
