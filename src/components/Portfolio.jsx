@@ -27,63 +27,67 @@ const Portfolio = () => {
         <p className="fadeIn">LinkedIn: <a href="https://linkedin.com/in/neha-bhat-855441105" target="_blank" rel="noopener noreferrer">linkedin.com/in/neha-bhat-855441105</a></p>
         
         <h2 className="subheading">Skills</h2>
-        <ul className="list fadeIn">
-          <li>Java, JavaScript</li>
-          <li>Oracle SQL, MySQL</li>
-          <li>REST API, Angular</li>
-          <li>React, Spring Boot</li>
-          <li>JBOSS, Maven</li>
-          <li>Visual Studio Code, IntelliJ</li>
-          <li>Eclipse IDE, Git</li>
-          <li>SVN, Postman</li>
-          <li>Agile, Jira</li>
-          <li>GitHub Copilot</li>
-        </ul>
+        <div className="skills-container">
+          <ul className="list fadeIn">
+            <li>Java, JavaScript</li>
+            <li>Oracle SQL, MySQL</li>
+            <li>REST API, Angular</li>
+            <li>React, Spring Boot</li>
+            <li>JBOSS, Maven</li>
+            <li>Visual Studio Code, IntelliJ</li>
+            <li>Eclipse IDE, Git</li>
+            <li>SVN, Postman</li>
+            <li>Agile, Jira</li>
+            <li>GitHub Copilot</li>
+          </ul>
+        </div>
       </section>
 
       <section id="work-experience" className="section work-experience-section">
         <h2 className="subheading">Work Experience</h2>
-        <div className="experience fadeIn">
-          <h3 className="jobTitle">Senior Software Engineer at Credit Agricole Corporate & Investment Bank</h3>
-          <p className="jobDuration">May 2022 - Present, Singapore</p>
-          <ul className="list">
-            <li>Leading development of Trade Finance application, delivering frontend interfaces and back-end modules using Java & Angular.</li>
-            <li>Led the creation of a Billing Module leveraging Spring Boot Microservices and Maven, reducing manual processes by 30%.</li>
-            <li>Developed Bank Guarantee UI for a front-office application.</li>
-            <li>Provide L3 support and resolve critical production issues.</li>
-            <li>Collaborate with stakeholders to develop business requirements.</li>
-            <li>Tech Stack: Java, Angular, Spring Boot, SQL, REST API, CI/CD.</li>
-          </ul>
-        </div>
-        <div className="experience fadeIn">
-          <h3 className="jobTitle">Senior Engineer at L&T Technology Services</h3>
-          <p className="jobDuration">Feb 2021 - May 2022, Bengaluru, India</p>
-          <ul className="list">
-            <li>Developed UI applications for Telecom Project using React JS.</li>
-            <li>Integrated front-end interfaces with back-end APIs built on Spring Boot Microservices.</li>
-            <li>Automated test cases using Jest and React Testing Library, improving code coverage by 20%.</li>
-            <li>Tech Stack: React.js, Redux, Spring Boot, Jest, REST API, CI/CD.</li>
-          </ul>
-        </div>
-        <div className="experience fadeIn">
-          <h3 className="jobTitle">Software Engineer at Newgen Software Technologies</h3>
-          <p className="jobDuration">Apr 2019 - Jan 2021, Noida, India</p>
-          <ul className="list">
-            <li>Created robust Java algorithms and JavaScript validations for the Bank Guarantee module.</li>
-            <li>Fixed UI bugs, enhancing application performance and user experience.</li>
-            <li>Built MIS dashboards using Oracle SQL to improve reporting accuracy.</li>
-            <li>Tech Stack: Java, Angular, Oracle SQL, JavaScript.</li>
-          </ul>
-        </div>
-        <div className="experience fadeIn">
-          <h3 className="jobTitle">Software Developer at Silverskills Private Limited</h3>
-          <p className="jobDuration">May 2017 - Apr 2019, Gurgaon, India</p>
-          <ul className="list">
-            <li>Automated data entry processes using Java and Selenium, reducing manual errors by 25%.</li>
-            <li>Developed a financial software web application utilizing Node.js, Express.js, and React.</li>
-            <li>Built dashboards using D3.js to visualize financial metrics.</li>
-            <li>Tech Stack: Node.js, React, D3.js, Selenium.</li>
-          </ul>
+        <div className="experience-container">
+          <div className="experience fadeIn">
+            <h3 className="jobTitle">Senior Software Engineer at Credit Agricole Corporate & Investment Bank</h3>
+            <p className="jobDuration">May 2022 - Present, Singapore</p>
+            <ul className="list">
+              <li>Leading development of Trade Finance application, delivering frontend interfaces and back-end modules using Java & Angular.</li>
+              <li>Led the creation of a Billing Module leveraging Spring Boot Microservices and Maven, reducing manual processes by 30%.</li>
+              <li>Developed Bank Guarantee UI for a front-office application.</li>
+              <li>Provide L3 support and resolve critical production issues.</li>
+              <li>Collaborate with stakeholders to develop business requirements.</li>
+              <li>Tech Stack: Java, Angular, Spring Boot, SQL, REST API, CI/CD.</li>
+            </ul>
+          </div>
+          <div className="experience fadeIn">
+            <h3 className="jobTitle">Senior Engineer at L&T Technology Services</h3>
+            <p className="jobDuration">Feb 2021 - May 2022, Bengaluru, India</p>
+            <ul className="list">
+              <li>Developed UI applications for Telecom Project using React JS.</li>
+              <li>Integrated front-end interfaces with back-end APIs built on Spring Boot Microservices.</li>
+              <li>Automated test cases using Jest and React Testing Library, improving code coverage by 20%.</li>
+              <li>Tech Stack: React.js, Redux, Spring Boot, Jest, REST API, CI/CD.</li>
+            </ul>
+          </div>
+          <div className="experience fadeIn">
+            <h3 className="jobTitle">Software Engineer at Newgen Software Technologies</h3>
+            <p className="jobDuration">Apr 2019 - Jan 2021, Noida, India</p>
+            <ul className="list">
+              <li>Created robust Java algorithms and JavaScript validations for the Bank Guarantee module.</li>
+              <li>Fixed UI bugs, enhancing application performance and user experience.</li>
+              <li>Built MIS dashboards using Oracle SQL to improve reporting accuracy.</li>
+              <li>Tech Stack: Java, Angular, Oracle SQL, JavaScript.</li>
+            </ul>
+          </div>
+          <div className="experience fadeIn">
+            <h3 className="jobTitle">Software Developer at Silverskills Private Limited</h3>
+            <p className="jobDuration">May 2017 - Apr 2019, Gurgaon, India</p>
+            <ul className="list">
+              <li>Automated data entry processes using Java and Selenium, reducing manual errors by 25%.</li>
+              <li>Developed a financial software web application utilizing Node.js, Express.js, and React.</li>
+              <li>Built dashboards using D3.js to visualize financial metrics.</li>
+              <li>Tech Stack: Node.js, React, D3.js, Selenium.</li>
+            </ul>
+          </div>
         </div>
       </section>
 
