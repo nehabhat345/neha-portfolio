@@ -1,0 +1,37 @@
+.portfolio {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .portfolio h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+  
+  .portfolio h2 {
+    font-size: 1.5em;
+    margin-top: 20px;
+  }
+  
+  .portfolio ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .portfolio li {
+    margin-bottom: 5px;
+  }
+  
+  .experience {
+    margin-top: 10px;
+  }
+  
+  .experience h3 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+  }
+  
+  .experience p {
+    margin: 0;
+    font-style: italic;
+  }
