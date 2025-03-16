@@ -1,19 +1,20 @@
 import React from 'react';
 import profilePic from '../assets/profile.jpeg';
+import './Portfolio.css';
 
 const Portfolio = () => {
   return (
-    <div style={styles.portfolio}>
-      <div style={styles.header}>
-        <img src={profilePic} alt="Neha Bhat" style={styles.profilePic} />
-        <h1 style={styles.heading}>Neha Bhat - Full Stack Developer</h1>
+    <div className="portfolio">
+      <div className="header">
+        <img src={profilePic} alt="Neha Bhat" className="profilePic" />
+        <h1 className="heading">Neha Bhat - Full Stack Developer</h1>
       </div>
-      <p>Full Stack Software Engineer with 8 years of experience in Java, Angular, Spring Boot Microservices, React, and SQL. Proficient in delivering scalable solutions in Banking, Finance, and Telecommunication sectors. Adept at collaborating with cross-functional teams and driving agile development practices to meet business objectives.</p>
-      <p>Email: nehabhat345@gmail.com | Phone: +65 82877436 | Location: Singapore</p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/neha-bhat-855441105" target="_blank" rel="noopener noreferrer">linkedin.com/in/neha-bhat-855441105</a></p>
+      <p className="fadeIn">Full Stack Software Engineer with 8 years of experience in Java, Angular, Spring Boot Microservices, React, and SQL. Proficient in delivering scalable solutions in Banking, Finance, and Telecommunication sectors. Adept at collaborating with cross-functional teams and driving agile development practices to meet business objectives.</p>
+      <p className="fadeIn">Email: nehabhat345@gmail.com | Phone: +65 82877436 | Location: Singapore</p>
+      <p className="fadeIn">LinkedIn: <a href="https://linkedin.com/in/neha-bhat-855441105" target="_blank" rel="noopener noreferrer">linkedin.com/in/neha-bhat-855441105</a></p>
       
-      <h2 style={styles.subheading}>Skills</h2>
-      <ul style={styles.list}>
+      <h2 className="subheading">Skills</h2>
+      <ul className="list fadeIn">
         <li>Java, JavaScript</li>
         <li>Oracle SQL, MySQL</li>
         <li>REST API, Angular</li>
@@ -26,11 +27,11 @@ const Portfolio = () => {
         <li>GitHub Copilot</li>
       </ul>
       
-      <h2 style={styles.subheading}>Experience</h2>
-      <div style={styles.experience}>
-        <h3 style={styles.jobTitle}>Senior Software Engineer at Credit Agricole Corporate & Investment Bank</h3>
-        <p style={styles.jobDuration}>May 2022 - Present, Singapore</p>
-        <ul style={styles.list}>
+      <h2 className="subheading">Experience</h2>
+      <div className="experience fadeIn">
+        <h3 className="jobTitle">Senior Software Engineer at Credit Agricole Corporate & Investment Bank</h3>
+        <p className="jobDuration">May 2022 - Present, Singapore</p>
+        <ul className="list">
           <li>Leading development of Trade Finance application, delivering frontend interfaces and back-end modules using Java & Angular.</li>
           <li>Led the creation of a Billing Module leveraging Spring Boot Microservices and Maven, reducing manual processes by 30%.</li>
           <li>Developed Bank Guarantee UI for a front-office application.</li>
@@ -39,30 +40,30 @@ const Portfolio = () => {
           <li>Tech Stack: Java, Angular, Spring Boot, SQL, REST API, CI/CD.</li>
         </ul>
       </div>
-      <div style={styles.experience}>
-        <h3 style={styles.jobTitle}>Senior Engineer at L&T Technology Services</h3>
-        <p style={styles.jobDuration}>Feb 2021 - May 2022, Bengaluru, India</p>
-        <ul style={styles.list}>
+      <div className="experience fadeIn">
+        <h3 className="jobTitle">Senior Engineer at L&T Technology Services</h3>
+        <p className="jobDuration">Feb 2021 - May 2022, Bengaluru, India</p>
+        <ul className="list">
           <li>Developed UI applications for Telecom Project using React JS.</li>
           <li>Integrated front-end interfaces with back-end APIs built on Spring Boot Microservices.</li>
           <li>Automated test cases using Jest and React Testing Library, improving code coverage by 20%.</li>
           <li>Tech Stack: React.js, Redux, Spring Boot, Jest, REST API, CI/CD.</li>
         </ul>
       </div>
-      <div style={styles.experience}>
-        <h3 style={styles.jobTitle}>Software Engineer at Newgen Software Technologies</h3>
-        <p style={styles.jobDuration}>Apr 2019 - Jan 2021, Noida, India</p>
-        <ul style={styles.list}>
+      <div className="experience fadeIn">
+        <h3 className="jobTitle">Software Engineer at Newgen Software Technologies</h3>
+        <p className="jobDuration">Apr 2019 - Jan 2021, Noida, India</p>
+        <ul className="list">
           <li>Created robust Java algorithms and JavaScript validations for the Bank Guarantee module.</li>
           <li>Fixed UI bugs, enhancing application performance and user experience.</li>
           <li>Built MIS dashboards using Oracle SQL to improve reporting accuracy.</li>
           <li>Tech Stack: Java, Angular, Oracle SQL, JavaScript.</li>
         </ul>
       </div>
-      <div style={styles.experience}>
-        <h3 style={styles.jobTitle}>Software Developer at Silverskills Private Limited</h3>
-        <p style={styles.jobDuration}>May 2017 - Apr 2019, Gurgaon, India</p>
-        <ul style={styles.list}>
+      <div className="experience fadeIn">
+        <h3 className="jobTitle">Software Developer at Silverskills Private Limited</h3>
+        <p className="jobDuration">May 2017 - Apr 2019, Gurgaon, India</p>
+        <ul className="list">
           <li>Automated data entry processes using Java and Selenium, reducing manual errors by 25%.</li>
           <li>Developed a financial software web application utilizing Node.js, Express.js, and React.</li>
           <li>Built dashboards using D3.js to visualize financial metrics.</li>
@@ -70,11 +71,11 @@ const Portfolio = () => {
         </ul>
       </div>
       
-      <h2 style={styles.subheading}>Education</h2>
-      <p>Bachelor of Engineering (Electronics and Communication), Model Institute of Engineering and Technology, Sep 2012 - Sep 2016, Jammu, India</p>
+      <h2 className="subheading">Education</h2>
+      <p className="fadeIn">Bachelor of Engineering (Electronics and Communication), Model Institute of Engineering and Technology, Sep 2012 - Sep 2016, Jammu, India</p>
       
-      <h2 style={styles.subheading}>Projects</h2>
-      <ul style={styles.list}>
+      <h2 className="subheading">Projects</h2>
+      <ul className="list fadeIn">
         <li>Trade Finance Project for CACIB, Singapore (Jun 2023 - Present): Developed front-end and back-end components for the Trade Finance Application using Angular and Spring Boot.</li>
         <li>Digital Transformation Project for CACIB, Singapore (Jun 2023 - Present): Created user interfaces and microservices to enhance OCR accuracy.</li>
         <li>Global Trade Portal (May 2022 - Jun 2023): Developed Bank Guarantee modules using Angular and Java.</li>
@@ -82,8 +83,8 @@ const Portfolio = () => {
         <li>Bank Guarantee Project for ICICI Bank, India (Nov 2019 - Jan 2021): Designed and developed user interface using inhouse technology.</li>
       </ul>
       
-      <h2 style={styles.subheading}>Achievements</h2>
-      <ul style={styles.list}>
+      <h2 className="subheading">Achievements</h2>
+      <ul className="list fadeIn">
         <li>AI with GitHub Copilot for Java & Spring Boot Developers</li>
         <li>Google Cloud Course: Java Microservices with Spring Boot and Spring Cloud</li>
         <li>React JS Certification (HackerRank)</li>
@@ -91,62 +92,6 @@ const Portfolio = () => {
       </ul>
     </div>
   );
-};
-
-const styles = {
-  portfolio: {
-    padding: '20px',
-    fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
-    backgroundColor: '#f4f4f9',
-    color: '#333',
-    maxWidth: '800px',
-    margin: '0 auto',
-    borderRadius: '10px',
-    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-    animation: 'fadeIn 1s ease-in-out',
-  },
-  header: {
-    display: 'flex',
-    alignItems: 'center',
-    marginBottom: '20px',
-  },
-  profilePic: {
-    borderRadius: '50%',
-    width: '100px',
-    height: '100px',
-    marginRight: '20px',
-  },
-  heading: {
-    fontSize: '2.5em',
-    color: '#007acc',
-    animation: 'slideIn 1s ease-in-out',
-  },
-  subheading: {
-    fontSize: '1.5em',
-    marginTop: '20px',
-    color: '#007acc',
-    animation: 'slideIn 1s ease-in-out',
-  },
-  list: {
-    listStyleType: 'none',
-    padding: '0',
-    animation: 'fadeIn 1s ease-in-out',
-  },
-  experience: {
-    marginTop: '10px',
-    animation: 'fadeIn 1s ease-in-out',
-  },
-  jobTitle: {
-    fontSize: '1.2em',
-    marginBottom: '5px',
-    color: '#007acc',
-    animation: 'slideIn 1s ease-in-out',
-  },
-  jobDuration: {
-    margin: '0',
-    fontStyle: 'italic',
-    animation: 'fadeIn 1s ease-in-out',
-  },
 };
 
 export default Portfolio;
