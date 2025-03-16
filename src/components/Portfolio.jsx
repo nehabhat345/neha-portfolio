@@ -89,13 +89,28 @@ const Portfolio = () => {
 
       <section id="projects" className="section projects-section">
         <h2 className="subheading">Projects</h2>
-        <ul className="list fadeIn">
-          <li>Trade Finance Project for CACIB, Singapore (Jun 2023 - Present): Developed front-end and back-end components for the Trade Finance Application using Angular and Spring Boot.</li>
-          <li>Digital Transformation Project for CACIB, Singapore (Jun 2023 - Present): Created user interfaces and microservices to enhance OCR accuracy.</li>
-          <li>Global Trade Portal (May 2022 - Jun 2023): Developed Bank Guarantee modules using Angular and Java.</li>
-          <li>Migration and User Management Project for Sky, London (Feb 2021 - May 2022): Developed UI and integrated BPM APIs for a User Management Module in React JS.</li>
-          <li>Bank Guarantee Project for ICICI Bank, India (Nov 2019 - Jan 2021): Designed and developed user interface using inhouse technology.</li>
-        </ul>
+        <div className="projects-container">
+          <div className="project-card">
+            <h3>Trade Finance Project for CACIB, Singapore</h3>
+            <p>(Jun 2023 - Present): Developed front-end and back-end components for the Trade Finance Application using Angular and Spring Boot.</p>
+          </div>
+          <div className="project-card">
+            <h3>Digital Transformation Project for CACIB, Singapore</h3>
+            <p>(Jun 2023 - Present): Created user interfaces and microservices to enhance OCR accuracy.</p>
+          </div>
+          <div className="project-card">
+            <h3>Global Trade Portal</h3>
+            <p>(May 2022 - Jun 2023): Developed Bank Guarantee modules using Angular and Java.</p>
+          </div>
+          <div className="project-card">
+            <h3>Migration and User Management Project for Sky, London</h3>
+            <p>(Feb 2021 - May 2022): Developed UI and integrated BPM APIs for a User Management Module in React JS.</p>
+          </div>
+          <div className="project-card">
+            <h3>Bank Guarantee Project for ICICI Bank, India</h3>
+            <p>(Nov 2019 - Jan 2021): Designed and developed user interface using inhouse technology.</p>
+          </div>
+        </div>
       </section>
 
       <section id="contact" className="section contact-section">
