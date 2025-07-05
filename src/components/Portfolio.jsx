@@ -1,167 +1,221 @@
-import React from 'react';
+import React, { useState } from 'react';
 import profilePic from '../assets/profile.jpeg';
 import './Portfolio.css';
 
 const Portfolio = () => {
+  const [darkMode, setDarkMode] = useState(false);
+  const toggleTheme = () => setDarkMode(!darkMode);
+
+  const textColor = darkMode ? 'white' : '#222';
+  const gradientBackground = darkMode
+    ? 'linear-gradient(to right, #6dd5fa, #2980b9)'
+    : 'linear-gradient(to right, #f0f4f8, #d9e2ec)';
+
+const certifications = [
+  {
+    title: "GitHub Copilot for Java & Spring Boot",
+    issuer: "GitHub (Udemy)",
+    date: "Feb 2025",
+    id: "3be2c887-f919-4f2e-b314-ecd995dcfe7b",
+    link: "https://www.udemy.com/certificate/UC-3be2c887-f919-4f2e-b314-ecd995dcfe7b/",
+    icon: "https://img.icons8.com/clouds/100/000000/github.png",
+  },
+  {
+    title: "Building Scalable Java Microservices with Spring Boot and Spring Cloud",
+    issuer: "Google Cloud (via Coursera)",
+    date: "Nov 17, 2024",
+    name: "Neha Bhat",
+    id: "RP4UUU8HJIK2",
+    link: "https://www.coursera.org/account/accomplishments/verify/RP4UUU8HJIK2",
+    icon: "https://img.icons8.com/color/96/000000/google-cloud-platform.png",
+  },
+  {
+    title: "React (Basic) Certificate",
+    issuer: "HackerRank",
+    name: "Neha Bhat",
+    link: "https://www.hackerrank.com/certificates/46ad8de62e0a",
+    icon: "https://img.icons8.com/clouds/100/000000/react.png",
+  }
+];
+
+
+
   return (
-    <div className="portfolio">
+    <div className={`portfolio ${darkMode ? 'dark-mode' : 'light-mode'}`}>
+      <button
+        onClick={toggleTheme}
+        className="theme-toggle"
+        aria-label="Toggle theme"
+      >
+        {darkMode ? '☀️ Light Mode' : '🌙 Dark Mode'}
+      </button>
+
       <nav className="navbar">
-        <a href="#home" className="nav-link">Home</a>
-        <a href="#about" className="nav-link">About</a>
-        <a href="#work-experience" className="nav-link">Work Experience</a>
-        <a href="#projects" className="nav-link">Projects</a>
-        <a href="#certifications" className="nav-link">Certifications</a>
-        <a href="#contact" className="nav-link">Contact Me</a>
+        {['home', 'about', 'summary', 'highlights', 'work-experience', 'projects', 'certifications', 'contact'].map((section) => (
+          <a key={section} href={`#${section}`} className="nav-link">
+            {section.replace('-', ' ').replace(/\b\w/g, c => c.toUpperCase())}
+          </a>
+        ))}
       </nav>
 
-      <section id="home" className="section home-section" 
-      style={{ color: 'white', background: 'linear-gradient(to right, #6dd5fa, #2980b9)', animation: 'fadeIn 2s ease-in-out' }}>
+      <section
+        id="home"
+        className="section home-section fadeIn"
+        style={{ color: textColor, background: gradientBackground }}
+      >
         <div className="header">
-          <img src={profilePic} alt="Neha Bhat" className="profilePic" />
+          <img src={profilePic} alt="Neha Bhat's profile" className="profilePic" />
           <h1 className="heading">Neha Bhat</h1>
-          <h2 className="subheading">Full Stack Developer</h2>
+          <h2 className="subheading">
+            Building impactful enterprise software | Java | React | Spring Boot
+          </h2>
+          <a
+            href={`${import.meta.env.BASE_URL}Neha_Bhat_Resume.pdf`}
+            download
+            className="resume-button"
+            aria-label="Download Resume PDF"
+          >
+            📑 Download Resume
+          </a>
         </div>
       </section>
 
-      <section id="about" className="section about-section">
+      <section id="summary" className="section fadeIn" style={{ color: textColor }}>
+        <h2 className="subheading">Summary</h2>
+        <p>👩‍💻 8+ years of experience as a Full Stack Developer in Banking, Finance & Telecom.</p>
+        <p>💡 Expert in scalable microservices & UIs using Java, Angular, React, Spring Boot.</p>
+        <p>🚀 Currently at Credit Agricole CIB, Singapore.</p>
+      </section>
+
+      <section id="highlights" className="section fadeIn" style={{ color: textColor }}>
+        <h2 className="subheading">Career Highlights</h2>
+        <ul className="highlight-list">
+          <p>✅ Revamped billing module; reduced 30% manual effort (Spring Boot)</p>
+          <p>📈 Boosted test coverage by 20% (React Testing Library)</p>
+          <p>🌏 Developed core banking modules in Singapore, Paris, and India, and telecom solutions in London, UK.</p>
+        </ul>
+      </section>
+
+      <section id="about" className="section fadeIn" style={{ color: textColor }}>
         <h2 className="subheading">About</h2>
-        <p className="fadeIn">Full Stack Software Engineer with 8 years of experience in Java, Angular, Spring Boot Microservices, React, and SQL. Proficient in delivering scalable solutions in Banking, Finance, and Telecommunication sectors. Adept at collaborating with cross-functional teams and driving agile development practices to meet business objectives.</p>
-        <p className="fadeIn">Email: nehabhat345@gmail.com | Phone: +65 82877436 | Location: Singapore</p>
-        <p className="fadeIn">LinkedIn: <a href="https://linkedin.com/in/neha-bhat-855441105" target="_blank" rel="noopener noreferrer">linkedin.com/in/neha-bhat-855441105</a></p>
-        
-        <h2 className="subheading">Skills</h2>
-        <div className="skills-container">
-          <ul className="skills-list fadeIn">
-            <li>Java</li>
-            <li>JavaScript</li>
-            <li>Oracle SQL</li>
-            <li>MySQL</li>
-            <li>REST API</li>
-            <li>Angular</li>
-            <li>React</li>
-            <li>Spring Boot</li>
-            <li>JBOSS</li>
-            <li>Maven</li>
-            <li>Visual Studio Code</li>
-            <li>IntelliJ</li>
-            <li>Eclipse IDE</li>
-            <li>Git</li>
-            <li>SVN</li>
-            <li>Postman</li>
-            <li>Agile</li>
-            <li>Jira</li>
-            <li>GitHub Copilot</li>
-          </ul>
-        </div>
+        <p>
+          Full Stack Software Engineer with 8 years in Java, Angular, React, Spring Boot Microservices, and SQL.
+          Experienced in scalable solutions in BFSI and telecom sectors. Agile team player.
+        </p>
+        <p>Email: nehabhat345@gmail.com | Phone: +65 82877436 | Location: Singapore</p>
+        <p>
+          LinkedIn: <a href="https://linkedin.com/in/neha-bhat-855441105" target="_blank" rel="noopener noreferrer">linkedin.com/in/neha-bhat-855441105</a>
+        </p>
       </section>
 
-      <section id="work-experience" className="section work-experience-section">
-        <h2 className="subheading">Work Experience</h2>
-        <div className="experience-container">
-          <div className="experience-card fadeIn">
-            <h3 className="jobTitle">Senior Software Engineer</h3>
-            <p className="company">Credit Agricole Corporate & Investment Bank</p>
-            <p className="jobDuration">May 2022 - Present, Singapore</p>
-            <ul className="list">
-              <li>Leading development of Trade Finance application, delivering frontend interfaces and back-end modules using Java & Angular.</li>
-              <li>Led the creation of a Billing Module leveraging Spring Boot Microservices and Maven, reducing manual processes by 30%.</li>
-              <li>Developed Bank Guarantee UI for a front-office application.</li>
-              <li>Provide L3 support and resolve critical production issues.</li>
-              <li>Collaborate with stakeholders to develop business requirements.</li>
-              <li>Tech Stack: Java, Angular, Spring Boot, SQL, REST API, CI/CD.</li>
-            </ul>
-          </div>
-          <div className="experience-card fadeIn">
-            <h3 className="jobTitle">Senior Engineer</h3>
-            <p className="company">L&T Technology Services</p>
-            <p className="jobDuration">Feb 2021 - May 2022, Bengaluru, India</p>
-            <ul className="list">
-              <li>Developed UI applications for Telecom Project using React JS.</li>
-              <li>Integrated front-end interfaces with back-end APIs built on Spring Boot Microservices.</li>
-              <li>Automated test cases using Jest and React Testing Library, improving code coverage by 20%.</li>
-              <li>Tech Stack: React.js, Redux, Spring Boot, Jest, REST API, CI/CD.</li>
-            </ul>
-          </div>
-          <div className="experience-card fadeIn">
-            <h3 className="jobTitle">Software Engineer</h3>
-            <p className="company">Newgen Software Technologies</p>
-            <p className="jobDuration">Apr 2019 - Jan 2021, Noida, India</p>
-            <ul className="list">
-              <li>Created robust Java algorithms and JavaScript validations for the Bank Guarantee module.</li>
-              <li>Fixed UI bugs, enhancing application performance and user experience.</li>
-              <li>Built MIS dashboards using Oracle SQL to improve reporting accuracy.</li>
-              <li>Tech Stack: Java, Angular, Oracle SQL, JavaScript.</li>
-            </ul>
-          </div>
-          <div className="experience-card fadeIn">
-            <h3 className="jobTitle">Software Developer</h3>
-            <p className="company">Silverskills Private Limited</p>
-            <p className="jobDuration">May 2017 - Apr 2019, Gurgaon, India</p>
-            <ul className="list">
-              <li>Automated data entry processes using Java and Selenium, reducing manual errors by 25%.</li>
-              <li>Developed a financial software web application utilizing Node.js, Express.js, and React.</li>
-              <li>Built dashboards using D3.js to visualize financial metrics.</li>
-              <li>Tech Stack: Node.js, React, D3.js, Selenium.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
+     <section id="work-experience" className="section fadeIn" style={{ color: textColor }}>
+  <h2 className="subheading">Work Experience</h2>
 
-      <section id="projects" className="section projects-section">
+  <div className="experience-card">
+    <h3><strong>Senior Software Engineer</strong></h3>
+    <p>
+      <span style={{ fontWeight: '600' }}>Credit Agricole Corporate & Investment Bank</span> &nbsp;|&nbsp; Singapore &nbsp;|&nbsp; <em>May 2022 - Present</em>
+    </p>
+    <ul>
+      <li>Lead development of Trade Finance application, delivering responsive front-end interfaces and robust back-end modules using Java & Angular.</li>
+      <li>Architected and implemented a Spring Boot Microservices-based Billing Module, reducing manual effort by 30% and improving operational efficiency.</li>
+      <li>Designed and developed Bank Guarantee UI for a critical front-office application, enhancing user experience and workflow speed.</li>
+      <li>Provide Level 3 production support, quickly resolving high-priority incidents to ensure system stability.</li>
+      <li>Collaborate closely with cross-functional teams and business stakeholders to define clear, actionable requirements.</li>
+    </ul>
+    <p><strong>Tech Stack:</strong> Java, Angular, Spring Boot, SQL, REST API, CI/CD</p>
+  </div>
+
+  <div className="experience-card">
+    <h3><strong>Senior Engineer</strong></h3>
+    <p>
+      <span style={{ fontWeight: '600' }}>L&T Technology Services</span> &nbsp;|&nbsp; Bengaluru, India &nbsp;|&nbsp; <em>Feb 2021 - May 2022</em>
+    </p>
+    <ul>
+      <li>Developed high-quality UI applications for telecom projects using React.js, delivering seamless user experiences.</li>
+      <li>Integrated React front-end with Spring Boot Microservices back-end, ensuring robust and scalable architecture.</li>
+      <li>Boosted code coverage by 20% by writing automated tests with Jest and React Testing Library, improving product reliability.</li>
+    </ul>
+    <p><strong>Tech Stack:</strong> React.js, Redux, Spring Boot, Jest, REST API, CI/CD</p>
+  </div>
+
+  <div className="experience-card">
+    <h3><strong>Software Engineer</strong></h3>
+    <p>
+      <span style={{ fontWeight: '600' }}>Newgen Software Technologies</span> &nbsp;|&nbsp; Noida, India &nbsp;|&nbsp; <em>Apr 2019 - Jan 2021</em>
+    </p>
+    <ul>
+      <li>Developed efficient Java algorithms and JavaScript validation for Bank Guarantee modules, improving accuracy and speed.</li>
+      <li>Resolved critical UI bugs, significantly enhancing application responsiveness and user satisfaction.</li>
+      <li>Created detailed MIS dashboards using Oracle SQL, streamlining reporting and decision-making processes.</li>
+    </ul>
+    <p><strong>Tech Stack:</strong> Java, Angular, Oracle SQL, JavaScript</p>
+  </div>
+
+  <div className="experience-card">
+    <h3><strong>Software Developer</strong></h3>
+    <p>
+      <span style={{ fontWeight: '600' }}>Silverskills Private Limited</span> &nbsp;|&nbsp; Gurgaon, India &nbsp;|&nbsp; <em>May 2017 - Apr 2019</em>
+    </p>
+    <ul>
+      <li>Automated data entry workflows with Java and Selenium, reducing manual errors by 25% and boosting efficiency.</li>
+      <li>Developed a full-stack financial web application leveraging Node.js, Express.js, and React.</li>
+      <li>Designed interactive dashboards using D3.js to visualize financial KPIs for management insights.</li>
+    </ul>
+    <p><strong>Tech Stack:</strong> Node.js, React, D3.js, Selenium</p>
+  </div>
+</section>
+
+
+      <section id="projects" className="section fadeIn" style={{ color: textColor }}>
         <h2 className="subheading">Projects</h2>
-        <div className="projects-container">
-          <div className="project-card fadeIn">
-            <h3>Trade Finance Project for CACIB, Singapore</h3>
-            <p>(Jun 2023 - Present): Developed front-end and back-end components for the Trade Finance Application using Angular and Spring Boot.</p>
-          </div>
-          <div className="project-card fadeIn">
-            <h3>Digital Transformation Project for CACIB, Singapore</h3>
-            <p>(Jun 2023 - Present): Created user interfaces and microservices to enhance OCR accuracy.</p>
-          </div>
-          <div className="project-card fadeIn">
-            <h3>Global Trade Portal</h3>
-            <p>(May 2022 - Jun 2023): Developed Bank Guarantee modules using Angular and Java.</p>
-          </div>
-          <div className="project-card fadeIn">
-            <h3>Migration and User Management Project for Sky, London</h3>
-            <p>(Feb 2021 - May 2022): Developed UI and integrated BPM APIs for a User Management Module in React JS.</p>
-          </div>
-          <div className="project-card fadeIn">
-            <h3>Bank Guarantee Project for ICICI Bank, India</h3>
-            <p>(Nov 2019 - Jan 2021): Designed and developed user interface using inhouse technology.</p>
-          </div>
-        </div>
+        {/* Project cards + GitHub links */}
       </section>
 
-      <section id="certifications" className="section certifications-section" 
-      style={{ color: 'white', background: 'linear-gradient(to right, #6dd5fa, #2980b9)', animation: 'fadeIn 2s ease-in-out' }}>
-        <h2 className="subheading">Licenses and Certifications</h2>
-        <div className="certifications-container">
-          <div className="certification-card fadeIn">
-            <h3>Github Copilot for Java and Spring Boot Developers</h3>
-            <p>GitHub</p>
-            <p>Issued: Feb 2025</p>
-            <p>Credential ID: 3be2c887-f919-4f2e-b314-ecd995dcfe7b</p>
-          </div>
-          <div className="certification-card fadeIn">
-            <h3>Building Scalable Java Microservices with Spring Boot and Spring Cloud</h3>
-            <p>Google Cloud</p>
-            <p>Issued: Nov 2024</p>
-            <p>Credential ID: RP4UUU8HJIK2</p>
-          </div>
-          <div className="certification-card fadeIn">
-            <h3>Certified React Developer</h3>
-            <p>React Training</p>
-            <p>Issued: March 2022</p>
-            <p>Credential ID: 46ad8de62e0a</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" className="section contact-section">
+<section
+  id="certifications"
+  className="section fadeIn"
+  style={{ color: textColor, background: gradientBackground }}
+>
+  <h2 className="subheading">Licenses and Certifications</h2>
+  <div className="certifications-container">
+    {certifications.map((cert, index) => (
+      <div key={index} className="certification-card">
+        <img
+          src={cert.icon || "https://img.icons8.com/clouds/100/000000/certificate.png"}
+          alt={`${cert.title} icon for ${cert.issuer}`}
+          className="cert-icon"
+        />
+        <h3>{cert.title}</h3>
+        {cert.name && <p><strong>Name:</strong> {cert.name}</p>}
+        {cert.date && <p><strong>Issued:</strong> {cert.date} — {cert.issuer}</p>}
+        {!cert.date && <p><strong>Issuer:</strong> {cert.issuer}</p>}
+        {cert.id && <p><strong>ID:</strong> {cert.id}</p>}
+        {cert.link && (
+          <p>
+            <a
+              href={cert.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`View certificate for ${cert.title}`}
+            >
+              {cert.link.includes("verify") ? "Verify Certificate" : "View Certificate"}
+            </a>
+          </p>
+        )}
+      </div>
+    ))}
+  </div>
+</section>
+      <section id="contact" className="section fadeIn" style={{ color: textColor }}>
         <h2 className="subheading">Contact Me</h2>
-        <p className="fadeIn">Feel free to reach out to me via email or phone.</p>
-        <p className="fadeIn">Email: nehabhat345@gmail.com | Phone: +65 82877436 | LinkedIn: <a href="https://linkedin.com/in/neha-bhat-855441105" target="_blank" rel="noopener noreferrer">linkedin.com/in/neha-bhat-855441105</a></p>
+        <p>Feel free to reach out via email or phone.</p>
+        <p>
+          Email: nehabhat345@gmail.com | Phone: +65 82877436 | LinkedIn:{' '}
+          <a href="https://linkedin.com/in/neha-bhat-855441105" target="_blank" rel="noopener noreferrer">
+            linkedin.com/in/neha-bhat-855441105
+          </a>
+        </p>
       </section>
     </div>
   );
