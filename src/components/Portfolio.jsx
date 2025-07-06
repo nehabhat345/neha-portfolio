@@ -30,7 +30,7 @@ const Portfolio = () => {
       icon: "https://img.icons8.com/color/96/000000/google-cloud-platform.png",
     },
     {
-      title: "React (Basic) Certificate",
+      title: "React Certificate",
       issuer: "HackerRank",
       name: "Neha Bhat",
       link: "https://www.hackerrank.com/certificates/46ad8de62e0a",
