@@ -164,34 +164,37 @@ const Portfolio = () => {
   </div>
 </section>
 
-      <section id="projects" className="section fadeIn" style={{ color: textColor }}>
-        <h2 className="subheading">Projects</h2>
-        <div className="project-card">
-          <h3>Trade Finance Project, Singapore</h3>
-          <p><em>Jun 2023 – Present</em></p>
-          <p>Developed front-end and back-end components for the Trade Finance Application using Angular and Spring Boot.</p>
-        </div>
-        <div className="project-card">
-          <h3>Digital Transformation Project, Singapore</h3>
-          <p><em>Jun 2023 – Present</em></p>
-          <p>Created user interfaces and microservices to enhance OCR accuracy.</p>
-        </div>
-        <div className="project-card">
-          <h3>Global Trade Portal</h3>
-          <p><em>May 2022 – Jun 2023</em></p>
-          <p>Developed Bank Guarantee modules using Angular and Java.</p>
-        </div>
-        <div className="project-card">
-          <h3>Migration and User Management Project, London</h3>
-          <p><em>Feb 2021 – May 2022</em></p>
-          <p>Developed UI and integrated BPM APIs for a User Management Module in React JS.</p>
-        </div>
-        <div className="project-card">
-          <h3>Bank Guarantee Project, India</h3>
-          <p><em>Nov 2019 – Jan 2021</em></p>
-          <p>Designed and developed user interface using in-house technology.</p>
-        </div>
-      </section>
+<section id="projects" className="section fadeIn" style={{ color: textColor }}>
+  <h2 className="subheading">Projects</h2>
+  <div className="project-cards">
+    <div className="project-card">
+      <h3>Trade Finance Project, Singapore</h3>
+      <p><em>Jun 2023 – Present</em></p>
+      <p>Developed front-end and back-end components for the Trade Finance Application using Angular and Spring Boot.</p>
+    </div>
+    <div className="project-card">
+      <h3>Digital Transformation Project, Singapore</h3>
+      <p><em>Jun 2023 – Present</em></p>
+      <p>Created user interfaces and microservices to enhance OCR accuracy.</p>
+    </div>
+    <div className="project-card">
+      <h3>Global Trade Portal</h3>
+      <p><em>May 2022 – Jun 2023</em></p>
+      <p>Developed Bank Guarantee modules using Angular and Java.</p>
+    </div>
+    <div className="project-card">
+      <h3>Migration and User Management Project, London</h3>
+      <p><em>Feb 2021 – May 2022</em></p>
+      <p>Developed UI and integrated BPM APIs for a User Management Module in React JS.</p>
+    </div>
+    <div className="project-card">
+      <h3>Bank Guarantee Project, India</h3>
+      <p><em>Nov 2019 – Jan 2021</em></p>
+      <p>Designed and developed user interface using in-house technology.</p>
+    </div>
+  </div>
+</section>
+
 
       <section
         id="certifications"

@@ -148,24 +148,15 @@ body {
   font-size: 0.95rem;
 }
 
-/* === Experience & Projects Cards === */
-.experience-card {
-  margin: 20px 0;
-  padding: 20px;
-  border-radius: 10px;
-  background-color: var(--section-bg);
-  /* border-left: 6px solid #4a90e2; */
-  box-shadow: 0 4px 10px var(--box-shadow-color);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: default;
-}
-
+/* === Experience & Project Cards === */
+.experience-card,
 .project-card {
-  margin: 20px 0;
-  padding: 20px;
-  border-radius: 10px;
+  flex: 0 0 320px;
+  scroll-snap-align: start;
   background-color: var(--section-bg);
   border-left: 6px solid #4a90e2;
+  padding: 20px;
+  border-radius: 10px;
   box-shadow: 0 4px 10px var(--box-shadow-color);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: default;
@@ -189,6 +180,69 @@ body {
   margin: 6px 0;
   line-height: 1.5;
   font-size: 0.95rem;
+}
+
+/* === Work Experience Horizontal Scroll === */
+.scroll-hint {
+  font-size: 0.9rem;
+  color: var(--text-color);
+  margin: 8px 0 10px 10px;
+  user-select: none;
+  font-style: italic;
+}
+
+.work-experience-cards,
+.project-cards {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  padding-bottom: 10px;
+  scroll-behavior: smooth;
+  position: relative;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Scrollbar styling */
+.work-experience-cards::-webkit-scrollbar,
+.project-cards::-webkit-scrollbar {
+  height: 8px;
+}
+
+.work-experience-cards::-webkit-scrollbar-thumb,
+.project-cards::-webkit-scrollbar-thumb {
+  background: #4a90e2;
+  border-radius: 4px;
+}
+
+.work-experience-cards::-webkit-scrollbar-track,
+.project-cards::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.work-experience-cards::before,
+.work-experience-cards::after,
+.project-cards::before,
+.project-cards::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 40px;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.work-experience-cards::before,
+.project-cards::before {
+  left: 0;
+  background: linear-gradient(to right, var(--section-bg), transparent);
+}
+
+.work-experience-cards::after,
+.project-cards::after {
+  right: 0;
+  background: linear-gradient(to left, var(--section-bg), transparent);
 }
 
 /* === Certifications === */
@@ -238,78 +292,6 @@ body {
   color: var(--btn-hover-text-color);
 }
 
-/* === Work Experience Horizontal Scroll === */
-.scroll-hint {
-  font-size: 0.9rem;
-  color: var(--text-color);
-  margin: 8px 0 10px 10px;
-  user-select: none;
-  font-style: italic;
-}
-
-.work-experience-cards {
-  display: flex;
-  overflow-x: auto;
-  gap: 15px;
-  padding-bottom: 10px;
-  scroll-behavior: smooth;
-  position: relative;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-}
-
-/* Scrollbar styling */
-.work-experience-cards::-webkit-scrollbar {
-  height: 8px;
-}
-.work-experience-cards::-webkit-scrollbar-thumb {
-  background: #4a90e2;
-  border-radius: 4px;
-}
-.work-experience-cards::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-/* Gradient fade overlays on edges */
-.work-experience-cards::before,
-.work-experience-cards::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 40px;
-  height: 100%;
-  pointer-events: none;
-  z-index: 10;
-}
-
-.work-experience-cards::before {
-  left: 0;
-  background: linear-gradient(to right, var(--section-bg), transparent);
-}
-
-.work-experience-cards::after {
-  right: 0;
-  background: linear-gradient(to left, var(--section-bg), transparent);
-}
-
-/* Experience cards inside horizontal scroll */
-.experience-card {
-  flex: 0 0 320px;
-  scroll-snap-align: start;
-  background-color: var(--section-bg);
-  /* border-left: 6px solid #4a90e2; */
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px var(--box-shadow-color);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-  cursor: default;
-}
-
-.experience-card:hover {
-  box-shadow: 0 8px 24px rgba(74, 144, 226, 0.5);
-  transform: translateY(-5px);
-}
-
 /* === Responsive === */
 @media (max-width: 768px) {
   .header {
@@ -329,11 +311,13 @@ body {
     font-size: 1.1rem;
   }
 
-  .work-experience-cards {
+  .work-experience-cards,
+  .project-cards {
     gap: 10px;
   }
 
-  .experience-card {
+  .experience-card,
+  .project-card {
     flex: 0 0 280px;
   }
 }
@@ -354,7 +338,8 @@ body {
     font-size: 0.9rem;
   }
 
-  .experience-card {
+  .experience-card,
+  .project-card {
     flex: 0 0 240px;
     padding: 15px;
   }
