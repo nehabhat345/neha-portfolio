@@ -65,7 +65,7 @@ const Portfolio = () => {
           <img src={profilePic} alt="Neha Bhat's profile" className="profilePic" />
           <h1 className="heading">Neha Bhat</h1>
           <h2 className="subheading">
-            Building impactful enterprise software | Java | React | Spring Boot
+            Building impactful enterprise software | Java | React | Angular | Spring Boot
           </h2>
           <a
             href={`${import.meta.env.BASE_URL}Neha_Bhat_Resume.pdf`}
